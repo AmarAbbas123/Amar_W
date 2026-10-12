@@ -1,0 +1,230 @@
+.experience-section {
+  padding-top: 50px;
+}
+
+/* Toggle Switcher */
+.experience-toggle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.exp-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.exp-toggle-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.exp-toggle-btn.active {
+  background: rgba(6, 182, 212, 0.15);
+  border-color: var(--accent-cyan);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
+}
+
+/* Timeline */
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  bottom: 20px;
+  left: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-violet), rgba(255, 255, 255, 0.05));
+}
+
+.timeline-card-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  position: relative;
+}
+
+.timeline-pin {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0d121c;
+  border: 2px solid var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+.pin-inner {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+}
+
+.pin-education {
+  border-color: var(--accent-violet);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.pin-education .pin-inner {
+  background: var(--accent-violet);
+}
+
+.timeline-card {
+  flex: 1;
+  padding: 30px;
+  background: rgba(14, 20, 32, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.timeline-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(6, 182, 212, 0.35);
+}
+
+.timeline-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.timeline-role {
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.timeline-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.timeline-period-badge,
+.timeline-meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+.timeline-period-badge {
+  color: #38bdf8;
+  border-color: rgba(6, 182, 212, 0.3);
+  background: rgba(6, 182, 212, 0.08);
+}
+
+.timeline-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+/* Achievements */
+.timeline-achievements {
+  margin-bottom: 22px;
+}
+
+.achievements-title {
+  font-size: 0.88rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-mono);
+}
+
+.achievements-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.ach-check {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.timeline-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 650px) {
+  .timeline-list::before {
+    left: 12px;
+  }
+  .timeline-card-wrapper {
+    gap: 16px;
+  }
+  .timeline-pin {
+    width: 28px;
+    height: 28px;
+  }
+  .pin-inner {
+    width: 10px;
+    height: 10px;
+  }
+  .timeline-card {
+    padding: 20px;
+  }
+}
