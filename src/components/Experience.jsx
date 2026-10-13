@@ -6,7 +6,8 @@ import {
   Calendar, 
   MapPin, 
   Award, 
-  CheckCircle2 
+  CheckCircle2,
+  ExternalLink
 } from 'lucide-react';
 import './Experience.css';
 
@@ -68,7 +69,21 @@ export default function Experience() {
                     <div className="timeline-card-header">
                       <div>
                         <h3 className="timeline-role">{item.role}</h3>
-                        <div className="timeline-company">{item.company}</div>
+                        <div className="timeline-company">
+                          {item.url ? (
+                            <a 
+                              href={item.url} 
+                              target="_blank" 
+                              rel="noreferrer" 
+                              className="timeline-company-link"
+                            >
+                              <span>{item.company}</span>
+                              <ExternalLink size={13} />
+                            </a>
+                          ) : (
+                            item.company
+                          )}
+                        </div>
                       </div>
                       
                       <div className="timeline-badges">

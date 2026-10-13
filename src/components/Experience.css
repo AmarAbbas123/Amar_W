@@ -132,6 +132,20 @@
   font-weight: 600;
 }
 
+.timeline-company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.timeline-company-link:hover {
+  color: #38bdf8;
+  gap: 8px;
+}
+
 .timeline-badges {
   display: flex;
   align-items: center;
