@@ -7,24 +7,24 @@
  */
 
 export const personalInfo = {
-  name: "Alex Morgan",
+  name: "Amar Abbas",
   title: "WordPress / CMS Specialist & Web Developer",
   tagline: "Architecting high-converting WordPress sites, custom themes, and fast modern web apps.",
-  bio: "I specialize in transforming complex business visions into ultra-fast, responsive, and secure digital experiences. With deep expertise in custom WordPress themes, bespoke plugins, WooCommerce architecture, and modern JavaScript/React, I bridge the gap between powerful CMS control and cutting-edge frontend performance.",
+  bio: "I specialize in transforming complex business visions into ultra-fast, responsive, and secure digital experiences. With deep expertise in custom WordPress themes, bespoke plugins, WooCommerce architecture, modern JavaScript/React and Laravel, I bridge the gap between powerful CMS control and cutting-edge frontend performance.",
   location: "Available Worldwide / Remote",
   statusBadge: "Available for New Projects",
-  email: "alex.morgan.dev@example.com",
-  phone: "+1 (555) 234-5678",
+  email: "amarabbas1414@gmail.com",
+  phone: "+92 3098915950",
   resumeUrl: "#resume", // Link to your downloadable resume PDF
   socials: {
-    github: "https://github.com",
+    github: "https://github.com/AmarAbbas123",
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    whatsapp: "https://wa.me/15552345678",
+    whatsapp: "https://wa.me/+923098915950",
   },
   stats: [
-    { label: "Years Experience", value: "5+" },
-    { label: "Completed Projects", value: "65+" },
+    { label: "Years Experience", value: "4+" },
+    { label: "Completed Projects", value: "15+" },
     { label: "Average PageSpeed", value: "98/100" },
     { label: "Client Satisfaction", value: "100%" },
   ],
