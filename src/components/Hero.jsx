@@ -102,7 +102,7 @@ export default function Hero() {
               </div>
               <div className="window-tab">
                 <Code2 size={13} className="tab-icon" />
-                <span>WP_Headless_Engine.php</span>
+                <span>Laravel / ApiController</span>
               </div>
               <div className="window-badge">
                 <Zap size={12} />
@@ -114,12 +114,13 @@ export default function Hero() {
             <div className="window-body">
               <pre className="code-block">
                 <code>
-                  <span className="code-comment">// High-performance decoupled architecture</span>{'\n'}
-                  <span className="code-keyword">class</span> <span className="code-class">ApexPerformanceEngine</span> {'{\n'}
-                  {'  '}<span className="code-keyword">public function</span> <span className="code-func">initializeStack</span>(): <span className="code-type">void</span> {'{\n'}
+                  <span className="code-comment">// High-performance Laravel backend & WP engine</span>{'\n'}
+                  <span className="code-keyword">class</span> <span className="code-class">ApiGatewayController</span> <span className="code-keyword">extends</span> <span className="code-class">Controller</span> {'{\n'}
+                  {'  '}<span className="code-keyword">public function</span> <span className="code-func">bootStack</span>(): <span className="code-type">JsonResponse</span> {'{\n'}
                   {'    '}<span className="code-variable">$this</span>-&gt;<span className="code-func">enableRedisCaching</span>();{'\n'}
-                  {'    '}<span className="code-variable">$this</span>-&gt;<span className="code-func">optimizeCoreWebVitals</span>();{'\n'}
-                  {'    '}<span className="code-variable">$this</span>-&gt;<span className="code-func">bridgeGraphQLToReact</span>();{'\n'}
+                  {'    '}<span className="code-variable">$this</span>-&gt;<span className="code-func">optimizeEloquentQueries</span>();{'\n'}
+                  {'    '}<span className="code-variable">$this</span>-&gt;<span className="code-func">bridgeEndpointsToReact</span>();{'\n'}
+                  {'    '}<span className="code-keyword">return</span> <span className="code-func">response</span>()-&gt;<span className="code-func">json</span>([<span className="code-type">'status'</span> =&gt; <span className="code-type">'live'</span>]);{'\n'}
                   {'  }'}{'\n'}
                   {'}'}
                 </code>
@@ -129,7 +130,7 @@ export default function Hero() {
               <div className="window-features">
                 <div className="feature-pill">
                   <CheckCircle2 size={14} className="feature-check" />
-                  <span>Zero Bloat Custom Themes</span>
+                  <span>Laravel 11 REST API Backend</span>
                 </div>
                 <div className="feature-pill">
                   <CheckCircle2 size={14} className="feature-check" />
@@ -141,7 +142,7 @@ export default function Hero() {
                 </div>
                 <div className="feature-pill">
                   <CheckCircle2 size={14} className="feature-check" />
-                  <span>WooCommerce API Integration</span>
+                  <span>WooCommerce & Sanctum Auth</span>
                 </div>
               </div>
             </div>
@@ -153,7 +154,7 @@ export default function Hero() {
               </div>
               <div>
                 <div className="badge-title">Enterprise Ready</div>
-                <div className="badge-sub">WordPress + React + PHP 8.x</div>
+                <div className="badge-sub">WordPress + Laravel + React</div>
               </div>
             </div>
 

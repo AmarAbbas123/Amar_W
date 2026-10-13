@@ -47,7 +47,7 @@ export const projects = [
     tagline: "High-volume luxury fashion storefront with bespoke checkout and sub-second load times.",
     description:
       "A high-performing WooCommerce enterprise platform handling 15,000+ monthly orders. Built with customized cart & checkout flows, Redis object caching, Stripe & PayPal custom gateways, and real-time inventory synchronization.",
-    tags: ["WooCommerce", "WordPress", "PHP 8.2", "Tailwind CSS", "Redis Cache", "Stripe API"],
+    tags: ["WooCommerce", "WordPress", "Laravel", "Tailwind CSS", "Redis Cache", "Stripe API"],
     metrics: {
       speedScore: 99,
       conversionBoost: "+38%",
@@ -71,7 +71,7 @@ export const projects = [
     tagline: "Custom WordPress block theme built with ACF Pro, FSE, and strict security hardening.",
     description:
       "A corporate digital hub for a venture capital firm. Crafted from scratch without heavy page builders, achieving top-tier Lighthouse scores and clean editorial control via Advanced Custom Fields Pro and custom Gutenberg blocks.",
-    tags: ["Custom Theme", "ACF Pro", "Gutenberg FSE", "PHP", "SCSS", "SEO Optimization"],
+    tags: ["Custom Theme", "ACF Pro", "Gutenberg FSE", "Laravel", "SCSS", "SEO Optimization"],
     metrics: {
       speedScore: 98,
       conversionBoost: "+45%",
@@ -95,7 +95,7 @@ export const projects = [
     tagline: "Next-gen editorial media platform combining WordPress REST API / GraphQL with React.",
     description:
       "A decoupled publishing system combining the easy content writing of WordPress admin with a lightning-fast React / Next.js frontend. Instant page navigation, static generation for articles, and live preview mode.",
-    tags: ["Headless WordPress", "React.js", "WPGraphQL", "Node.js", "Tailwind CSS", "Vercel"],
+    tags: ["Headless WordPress", "React.js", "WPGraphQL", "Laravel API", "Tailwind CSS", "Vercel"],
     metrics: {
       speedScore: 100,
       conversionBoost: "+62%",
@@ -119,7 +119,7 @@ export const projects = [
     tagline: "Proprietary WordPress performance & asset optimization plugin.",
     description:
       "A custom-coded WordPress plugin that automatically defers uncritical JavaScript, converts image uploads to WebP/AVIF formats, minifies CSS on-the-fly, and provides pre-fetching rules.",
-    tags: ["WordPress Plugin Dev", "PHP", "MySQL", "Core Web Vitals", "Asset Pipeline"],
+    tags: ["WordPress Plugin Dev", "Laravel", "MySQL", "Core Web Vitals", "Asset Pipeline"],
     metrics: {
       speedScore: 100,
       conversionBoost: "+50%",
@@ -141,8 +141,8 @@ export const projects = [
     featured: false,
     tagline: "Comprehensive appointment & booking engine for service businesses.",
     description:
-      "A modern web application integrating calendar sync, automated SMS reminders, customer portals, and seamless payment processing with customizable staff schedules.",
-    tags: ["React", "Node.js", "Express", "PostgreSQL", "Twilio", "Stripe"],
+      "A modern full-stack web application powered by Laravel REST API backend with Sanctum authentication, MySQL, and a responsive React frontend with automated appointment scheduling.",
+    tags: ["React", "Laravel 11", "MySQL", "Laravel Sanctum", "Inertia.js", "Stripe API"],
     metrics: {
       speedScore: 97,
       conversionBoost: "+30%",
@@ -212,16 +212,16 @@ export const skillCategories = [
     ],
   },
   {
-    category: "Backend, Databases & APIs",
+    category: "Backend (Laravel), Databases & APIs",
     icon: "Database",
-    description: "Robust server logic, database optimizations, and third-party integrations.",
+    description: "Robust Laravel backend architecture, Eloquent ORM, database optimizations, and RESTful APIs.",
     skills: [
-      { name: "PHP (7.4 - 8.3 OOP & Hooks)", level: 94 },
-      { name: "MySQL & Database Query Tuning", level: 87 },
-      { name: "RESTful API Development & Webhooks", level: 92 },
-      { name: "Node.js & Express Basics", level: 82 },
-      { name: "Redis & Object Caching", level: 86 },
-      { name: "Authentication (JWT, OAuth, WP Nonces)", level: 90 },
+      { name: "Laravel (10 & 11 Framework)", level: 96 },
+      { name: "Laravel MVC & App Architecture", level: 94 },
+      { name: "Laravel REST APIs & Sanctum Auth", level: 93 },
+      { name: "Eloquent ORM & MySQL Query Tuning", level: 92 },
+      { name: "Laravel Queues, Jobs & Redis Caching", level: 90 },
+      { name: "API Integrations & Webhooks", level: 92 },
     ],
   },
   {
@@ -254,7 +254,7 @@ export const experience = [
       "Optimized database architectures resulting in a 45% reduction in server response times.",
       "Introduced ACF Block components that reduced content manager publishing time by 60%.",
     ],
-    techStack: ["WordPress", "WooCommerce", "PHP 8.2", "React", "REST API", "Tailwind CSS"],
+    techStack: ["WordPress", "WooCommerce", "Laravel", "React", "REST API", "Tailwind CSS"],
   },
   {
     id: "exp-2",
@@ -270,7 +270,7 @@ export const experience = [
       "Created proprietary plugin for custom payment gateway integrations with automated reconciliations.",
       "Resolved critical security vulnerabilities and restored hacked sites with 100% data recovery.",
     ],
-    techStack: ["WordPress", "PHP", "JavaScript", "ACF Pro", "MySQL", "SCSS"],
+    techStack: ["WordPress", "Laravel", "JavaScript", "ACF Pro", "MySQL", "SCSS"],
   },
   {
     id: "exp-3",
@@ -293,16 +293,16 @@ export const education = [
   {
     id: "edu-1",
     degree: "Bachelor of Science in Computer Science / Information Technology",
-    institution: "State University of Technology",
-    period: "2015 - 2019",
+    institution: "University of Engineering and Technology Peshawar",
+    period: "2018 - 2012",
     details: "Focused on Software Architecture, Web Technologies, Database Systems, and Object-Oriented Programming.",
   },
   {
     id: "edu-2",
-    degree: "Advanced WordPress Core & Full-Stack Web Certification",
-    institution: "Meta / WPEngine Certified Developer",
-    period: "2020",
-    details: "Specialized training in modern PHP 8 standards, WordPress VIP performance guidelines, and React.",
+    degree: "PHP with Laravel for beginners - Become a Master in Laravel",
+    institution: "Udemy",
+    period: "2026",
+    details: "Learn to master Laravel to make advanced applications like the real CMS app",
   },
 ];
 
@@ -327,9 +327,9 @@ export const services = [
   },
   {
     icon: "Cpu",
-    title: "Headless WordPress & Modern React Apps",
+    title: "Laravel Backend & Headless Web Apps",
     description:
-      "Next-generation decoupled web applications using WordPress as a seamless headless CMS paired with a blindingly fast React or Next.js frontend.",
+      "Robust backend engineering using Laravel 11 for high-performance REST APIs paired with modern React frontends, as well as decoupled headless WordPress architectures.",
   },
   {
     icon: "ShieldCheck",

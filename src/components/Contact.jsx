@@ -220,6 +220,7 @@ export default function Contact() {
                     >
                       <option>Custom WordPress Theme</option>
                       <option>WooCommerce Store / E-Commerce</option>
+                      <option>Laravel REST API & Web App</option>
                       <option>Headless WordPress + React</option>
                       <option>Core Web Vitals & Speed Optimization</option>
                       <option>Custom Plugin Engineering</option>
