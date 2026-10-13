@@ -20,8 +20,8 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    projectType: 'Custom WordPress Theme',
-    budget: '$3k - $5k',
+    phone: '',
+    projectType: 'React Frontend / SPA Web App',
     message: '',
   });
 
@@ -168,8 +168,8 @@ export default function Contact() {
                     setFormData({
                       name: '',
                       email: '',
-                      projectType: 'Custom WordPress Theme',
-                      budget: '$3k - $5k',
+                      phone: '',
+                      projectType: 'React Frontend / SPA Web App',
                       message: '',
                     });
                   }}
@@ -211,6 +211,18 @@ export default function Contact() {
 
                 <div className="form-row">
                   <div className="form-group">
+                    <label htmlFor="phone">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      placeholder="+92 300 1234567"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="form-group">
                     <label htmlFor="projectType">Service / Project Type</label>
                     <select 
                       id="projectType" 
@@ -218,29 +230,13 @@ export default function Contact() {
                       value={formData.projectType}
                       onChange={handleChange}
                     >
-                      <option>Custom WordPress Theme</option>
-                      <option>WooCommerce Store / E-Commerce</option>
+                      <option>React Frontend / SPA Web App</option>
                       <option>Laravel REST API & Web App</option>
+                      <option>Custom WordPress Theme / Elementor</option>
+                      <option>WooCommerce Store / E-Commerce</option>
                       <option>Headless WordPress + React</option>
-                      <option>Core Web Vitals & Speed Optimization</option>
-                      <option>Custom Plugin Engineering</option>
-                      <option>Figma to WordPress Conversion</option>
+                      <option>Technical SEO & Core Web Vitals</option>
                       <option>Other / General Consultation</option>
-                    </select>
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="budget">Estimated Budget</label>
-                    <select 
-                      id="budget" 
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                    >
-                      <option>$1,000 - $3,000</option>
-                      <option>$3,000 - $5,000</option>
-                      <option>$5,000 - $10,000</option>
-                      <option>$10,000+</option>
                     </select>
                   </div>
                 </div>

@@ -55,7 +55,7 @@ export default function Navbar() {
           </div>
           <div className="brand-text">
             <span className="brand-name">{personalInfo.name}</span>
-            <span className="brand-sub">WP & Full-Stack</span>
+            <span className="brand-sub">WP • Laravel • React</span>
           </div>
         </a>
 

@@ -26,11 +26,11 @@ export default function Footer() {
               </div>
               <div>
                 <span className="brand-name">{personalInfo.name}</span>
-                <span className="brand-sub">WP & Full-Stack</span>
+                <span className="brand-sub">WP • Laravel • React</span>
               </div>
             </div>
             <p className="footer-brand-tagline">
-              Engineering lightning-fast WordPress architectures, custom themes, and next-gen headless web experiences.
+              Engineering lightning-fast WordPress architectures, robust Laravel APIs, and modern React web experiences.
             </p>
           </div>
 

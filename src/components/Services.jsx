@@ -7,6 +7,8 @@ import {
   Cpu, 
   ShieldCheck, 
   Repeat, 
+  Search,
+  Code,
   ArrowRight 
 } from 'lucide-react';
 import './Services.css';
@@ -20,6 +22,8 @@ export default function Services() {
       case 'Cpu': return <Cpu size={24} />;
       case 'ShieldCheck': return <ShieldCheck size={24} />;
       case 'Repeat': return <Repeat size={24} />;
+      case 'Search': return <Search size={24} />;
+      case 'Code': return <Code size={24} />;
       default: return <Zap size={24} />;
     }
   };

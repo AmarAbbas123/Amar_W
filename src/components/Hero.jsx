@@ -26,7 +26,7 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-title">
-            Crafting <span className="gradient-text">High-Velocity</span> WordPress & Modern Web Apps.
+            Crafting <span className="gradient-text">High-Velocity</span> WordPress, Laravel & React Web Apps.
           </h1>
 
           <p className="hero-description">
@@ -130,11 +130,11 @@ export default function Hero() {
               <div className="window-features">
                 <div className="feature-pill">
                   <CheckCircle2 size={14} className="feature-check" />
-                  <span>Laravel 11 REST API Backend</span>
+                  <span>React Component Architecture</span>
                 </div>
                 <div className="feature-pill">
                   <CheckCircle2 size={14} className="feature-check" />
-                  <span>Sub-Second TTFB Latency</span>
+                  <span>Laravel 11 REST API Backend</span>
                 </div>
                 <div className="feature-pill">
                   <CheckCircle2 size={14} className="feature-check" />
@@ -142,7 +142,7 @@ export default function Hero() {
                 </div>
                 <div className="feature-pill">
                   <CheckCircle2 size={14} className="feature-check" />
-                  <span>WooCommerce & Sanctum Auth</span>
+                  <span>Sub-Second TTFB Latency</span>
                 </div>
               </div>
             </div>
