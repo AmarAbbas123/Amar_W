@@ -32,9 +32,7 @@ export const personalInfo = {
 
 export const categories = [
   "All",
-  "WordPress / WooCommerce",
-  "Custom Themes & Plugins",
-  "Headless & React",
+  "WordPress",
   "Full-Stack Web",
 ];
 
@@ -90,7 +88,7 @@ export const projects = [
   {
     id: "project-tsa",
     title: "Telecom Site Audit Platform",
-    category: "WordPress / WooCommerce",
+    category: "WordPress",
     featured: true,
     tagline: "App-based telecom site audit solution showcase with Yoast SEO & responsive architecture.",
     description:
@@ -114,7 +112,7 @@ export const projects = [
   {
     id: "project-visualsoft",
     title: "VisualSoft Global Technology",
-    category: "WordPress / WooCommerce",
+    category: "WordPress",
     featured: true,
     tagline: "Corporate AI & software solutions portal with custom Elementor layouts and optimized assets.",
     description:
@@ -138,7 +136,7 @@ export const projects = [
   {
     id: "project-designer-metals",
     title: "Designer Metals",
-    category: "WordPress / WooCommerce",
+    category: "WordPress",
     featured: true,
     tagline: "Metal building products, carport & garage solutions with Rank Math SEO architecture.",
     description:
@@ -162,7 +160,7 @@ export const projects = [
   {
     id: "project-sunguard",
     title: "Sun Guard Design Australia",
-    category: "WordPress / WooCommerce",
+    category: "WordPress",
     featured: true,
     tagline: "Australian custom blinds, curtains, awnings & shutters showcase with Yoast SEO.",
     description:
@@ -186,7 +184,7 @@ export const projects = [
   {
     id: "project-christian-behr",
     title: "Christian Behr Strategy Advisory",
-    category: "WordPress / WooCommerce",
+    category: "WordPress",
     featured: true,
     tagline: "Executive strategic advisory platform for marketing, sales & AI with LiteSpeed caching.",
     description:
@@ -210,7 +208,7 @@ export const projects = [
   {
     id: "project-camping-herzog",
     title: "Altmühlsee Camping Herzog",
-    category: "WordPress / WooCommerce",
+    category: "WordPress",
     featured: false,
     tagline: "German lakeside camping & holiday apartments booking inquiry portal.",
     description:
@@ -234,7 +232,7 @@ export const projects = [
   {
     id: "project-heather-harries",
     title: "Heather Harries Education Hub",
-    category: "WordPress / WooCommerce",
+    category: "WordPress",
     featured: false,
     tagline: "Educational learning hub with event schedules, WooCommerce and community resources.",
     description:
@@ -258,7 +256,7 @@ export const projects = [
   {
     id: "project-everon",
     title: "Everon Solutions Australia",
-    category: "WordPress / WooCommerce",
+    category: "WordPress",
     featured: false,
     tagline: "Commercial enterprise & sustainable solutions platform in Australia.",
     description:
