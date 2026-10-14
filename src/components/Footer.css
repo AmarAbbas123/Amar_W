@@ -122,3 +122,39 @@
     gap: 30px;
   }
 }
+
+@media (max-width: 540px) {
+  .footer-wrapper {
+    padding: 44px 0 24px 0;
+  }
+  .footer-top-row {
+    margin-bottom: 36px;
+    gap: 26px;
+  }
+  .footer-bottom-row {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .footer-copy {
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+  .back-to-top-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 9px 16px;
+  }
+  .footer-social-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-nav-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

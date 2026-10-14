@@ -9,6 +9,7 @@
   justify-content: center;
   gap: 12px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 .exp-toggle-btn {
@@ -44,6 +45,7 @@
   max-width: 900px;
   margin: 0 auto;
   position: relative;
+  width: 100%;
 }
 
 .timeline-list {
@@ -68,6 +70,7 @@
   align-items: flex-start;
   gap: 32px;
   position: relative;
+  width: 100%;
 }
 
 .timeline-pin {
@@ -105,6 +108,8 @@
   padding: 30px;
   background: rgba(14, 20, 32, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.09);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .timeline-card:hover {
@@ -122,14 +127,16 @@
 }
 
 .timeline-role {
-  font-size: 1.35rem;
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
   margin-bottom: 4px;
+  word-break: break-word;
 }
 
 .timeline-company {
   font-size: 1rem;
   color: var(--accent-cyan);
   font-weight: 600;
+  word-break: break-word;
 }
 
 .timeline-company-link {
@@ -149,7 +156,7 @@
 .timeline-badges {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -165,6 +172,7 @@
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .timeline-period-badge {
@@ -178,6 +186,7 @@
   font-size: 0.95rem;
   line-height: 1.65;
   margin-bottom: 20px;
+  word-break: break-word;
 }
 
 /* Achievements */
@@ -207,6 +216,7 @@
   gap: 10px;
   font-size: 0.9rem;
   color: var(--text-main);
+  word-break: break-word;
 }
 
 .ach-check {
@@ -224,11 +234,23 @@
 }
 
 @media (max-width: 650px) {
+  .experience-toggle-wrap {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+  .exp-toggle-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 18px;
+    font-size: 0.88rem;
+  }
   .timeline-list::before {
-    left: 12px;
+    left: 13px;
   }
   .timeline-card-wrapper {
-    gap: 16px;
+    gap: 14px;
   }
   .timeline-pin {
     width: 28px;
@@ -239,6 +261,34 @@
     height: 10px;
   }
   .timeline-card {
-    padding: 20px;
+    padding: 20px 16px;
+  }
+  .timeline-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .timeline-list::before {
+    left: 11px;
+  }
+  .timeline-pin {
+    width: 24px;
+    height: 24px;
+  }
+  .pin-inner {
+    width: 8px;
+    height: 8px;
+  }
+  .timeline-card-wrapper {
+    gap: 10px;
+  }
+  .timeline-card {
+    padding: 16px 12px;
+  }
+  .achievement-item {
+    font-size: 0.85rem;
   }
 }
