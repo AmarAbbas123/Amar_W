@@ -15,8 +15,16 @@ export default function ProjectModal({ project, onClose }) {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
     };
+
+    // Lock background page scroll while popup is open
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [onClose]);
 
   if (!project) return null;
@@ -113,37 +121,39 @@ export default function ProjectModal({ project, onClose }) {
             </div>
           </div>
 
-          {/* Action Footer */}
-          <div className="modal-footer-actions">
+        </div>
+
+        {/* Action Footer (Pinned at bottom of modal) */}
+        <div className="modal-footer-actions">
+          <a 
+            href={project.liveDemo}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-primary"
+          >
+            <span>Live Demonstration</span>
+            <ExternalLink size={16} />
+          </a>
+          {project.github && (
             <a 
-              href={project.liveDemo}
+              href={project.github}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-primary"
+              className="btn btn-secondary"
             >
-              <span>Live Demonstration</span>
-              <ExternalLink size={16} />
+              <GithubIcon size={16} />
+              <span>Source Code</span>
             </a>
-            {project.github && (
-              <a 
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-secondary"
-              >
-                <GithubIcon size={16} />
-                <span>Source Code</span>
-              </a>
-            )}
-            <button 
-              className="btn btn-secondary modal-cancel-btn"
-              onClick={onClose}
-            >
-              Close
-            </button>
-          </div>
-
+          )}
+          <button 
+            type="button"
+            className="btn btn-secondary modal-cancel-btn"
+            onClick={onClose}
+          >
+            Close
+          </button>
         </div>
+
       </div>
     </div>
   );
