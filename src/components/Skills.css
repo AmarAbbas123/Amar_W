@@ -57,6 +57,7 @@
   padding: 38px;
   background: rgba(11, 16, 27, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
 .skills-card-header {
@@ -74,14 +75,16 @@
 }
 
 .skills-category-badge h3 {
-  font-size: 1.45rem;
+  font-size: clamp(1.2rem, 3vw, 1.45rem);
   color: #ffffff;
+  word-break: break-word;
 }
 
 .skills-category-description {
   color: var(--text-muted);
-  font-size: 0.98rem;
+  font-size: clamp(0.88rem, 1.8vw, 0.98rem);
   max-width: 650px;
+  line-height: 1.6;
 }
 
 /* Meters Grid */
@@ -102,6 +105,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .skill-meter-name {
@@ -115,6 +119,7 @@
 
 .skill-icon-tick {
   color: var(--accent-cyan);
+  flex-shrink: 0;
 }
 
 .skill-meter-percentage {
@@ -122,6 +127,7 @@
   font-size: 0.82rem;
   color: var(--accent-cyan);
   font-weight: 600;
+  flex-shrink: 0;
 }
 
 .skill-track {
@@ -158,17 +164,44 @@
 @media (max-width: 992px) {
   .skills-tab-bar {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
   .skills-meters-grid {
     grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .skills-content-card {
+    padding: 30px 24px;
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
+  .skills-tab-bar {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .skills-tab-btn {
+    padding: 12px 14px;
+    font-size: 0.84rem;
+    gap: 8px;
+  }
+  .skills-card-header {
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  .skills-content-card {
+    padding: 20px 16px;
+  }
+  .skill-meter-name {
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 380px) {
   .skills-tab-bar {
     grid-template-columns: 1fr;
   }
   .skills-content-card {
-    padding: 24px 18px;
+    padding: 16px 12px;
   }
 }

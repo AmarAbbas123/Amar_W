@@ -156,7 +156,26 @@
   border: none;
   color: var(--text-main);
   cursor: pointer;
-  padding: 6px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.mobile-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent-cyan);
+}
+
+/* Mobile Drawer Backdrop */
+.mobile-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 890;
 }
 
 /* Mobile Drawer */
@@ -167,10 +186,15 @@
   right: 0;
   background: rgba(10, 14, 23, 0.98);
   backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 24px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
   animation: slideDown 0.25s ease-out;
+  max-height: calc(100vh - var(--nav-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 950;
 }
 
 @keyframes slideDown {
@@ -181,7 +205,7 @@
 .mobile-links {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .mobile-nav-link {
@@ -191,6 +215,7 @@
   font-weight: 500;
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: color 0.2s ease;
 }
 
 .mobile-nav-link:hover,
@@ -201,8 +226,9 @@
 .mobile-drawer-footer {
   display: flex;
   gap: 12px;
-  margin-top: 12px;
-  padding-top: 12px;
+  margin-top: 14px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 992px) {
@@ -213,5 +239,45 @@
   }
   .mobile-toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-hire-btn {
+    display: none;
+  }
+  .navbar-inner {
+    gap: 12px;
+  }
+  .brand-name {
+    font-size: 1rem;
+  }
+  .brand-sub {
+    font-size: 0.65rem;
+  }
+  .brand-icon-box {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-drawer {
+    padding: 20px 16px;
+  }
+  .mobile-drawer-footer {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .mobile-drawer-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .brand-sub {
+    display: none;
   }
 }

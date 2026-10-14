@@ -63,7 +63,7 @@
 /* Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 28px;
 }
 
@@ -73,6 +73,7 @@
   overflow: hidden;
   border-radius: var(--radius-lg);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
 }
 
 .project-card:hover {
@@ -88,6 +89,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .project-visual-overlay {
@@ -163,6 +165,16 @@
   box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
 }
 
+/* On touch devices, show quick view button cleanly */
+@media (hover: none) {
+  .quick-view-overlay-btn {
+    opacity: 0.92;
+    transform: none;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}
+
 /* Card Body */
 .project-card-body {
   padding: 22px;
@@ -176,6 +188,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .project-category-tag {
@@ -195,6 +209,12 @@
 .project-card-title {
   font-size: 1.28rem;
   margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.project-card-title:hover {
+  color: var(--accent-cyan);
 }
 
 .project-card-tagline {
@@ -223,6 +243,7 @@
   justify-content: space-between;
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 10px;
 }
 
 .project-direct-links {
@@ -232,8 +253,8 @@
 }
 
 .btn-icon-link {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -258,8 +279,41 @@
   color: var(--accent-cyan);
 }
 
-@media (max-width: 480px) {
+/* Responsive */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .category-filter-wrap {
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 0.82rem;
+  }
+  .project-card-body {
+    padding: 18px 14px;
+  }
+  .project-card-title {
+    font-size: 1.18rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .filter-btn {
+    padding: 5px 10px;
+    font-size: 0.78rem;
+  }
+  .project-visual-header {
+    height: 160px;
   }
 }

@@ -67,6 +67,10 @@ export default function Projects() {
               <div 
                 className="project-visual-header"
                 style={{ background: project.imageGradient }}
+                onClick={() => setActiveModalProject(project)}
+                role="button"
+                tabIndex={0}
+                aria-label={`View details for ${project.title}`}
               >
                 <div className="project-visual-overlay"></div>
                 
@@ -86,7 +90,10 @@ export default function Projects() {
                 {/* Quick View Button */}
                 <button 
                   className="quick-view-overlay-btn"
-                  onClick={() => setActiveModalProject(project)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActiveModalProject(project);
+                  }}
                   title="View Deep Architecture"
                 >
                   <Eye size={16} />
@@ -101,7 +108,14 @@ export default function Projects() {
                   <span className="project-load-time">{project.metrics.pageLoad} load</span>
                 </div>
 
-                <h3 className="project-card-title">{project.title}</h3>
+                <h3 
+                  className="project-card-title"
+                  onClick={() => setActiveModalProject(project)}
+                  role="button"
+                  tabIndex={0}
+                >
+                  {project.title}
+                </h3>
                 <p className="project-card-tagline">{project.tagline}</p>
 
                 {/* Tech Tags */}
