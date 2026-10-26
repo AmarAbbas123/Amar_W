@@ -161,13 +161,13 @@
   100% { transform: translateX(100%); }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1040px) {
   .skills-tab-bar {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
   }
   .skills-meters-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     row-gap: 20px;
   }
   .skills-content-card {
