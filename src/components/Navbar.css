@@ -27,50 +27,43 @@
 
 /* Brand */
 .navbar-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
+  transition: transform 0.25s ease;
 }
 
-.brand-icon-box {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2));
-  border: 1px solid rgba(6, 182, 212, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-cyan);
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
-  transition: all 0.3s ease;
+.navbar-brand:hover {
+  transform: translateY(-1px);
 }
 
-.navbar-brand:hover .brand-icon-box {
-  transform: rotate(6deg) scale(1.05);
-  border-color: var(--accent-cyan);
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name {
+.brand-logo-text {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 800;
+  font-size: 1.35rem;
   color: #ffffff;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: baseline;
+  user-select: none;
 }
 
-.brand-sub {
-  font-size: 0.72rem;
+.brand-logo-gradient {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 0.28rem;
+  transition: filter 0.3s ease;
+}
+
+.navbar-brand:hover .brand-logo-gradient {
+  filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.5));
+}
+
+.brand-logo-dot {
   color: var(--accent-cyan);
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-weight: 900;
+  margin-left: 1px;
 }
 
 /* Status Badge */

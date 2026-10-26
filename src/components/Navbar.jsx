@@ -4,7 +4,6 @@ import {
   FileText, 
   Menu, 
   X, 
-  Terminal, 
   ArrowUpRight 
 } from 'lucide-react';
 import './Navbar.css';
@@ -68,14 +67,11 @@ export default function Navbar() {
     <header className={`navbar-wrapper ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-inner">
         {/* Brand / Logo */}
-        <a href="#hero" className="navbar-brand">
-          <div className="brand-icon-box">
-            <Terminal size={18} className="brand-icon" />
-          </div>
-          <div className="brand-text">
-            <span className="brand-name">{personalInfo.name}</span>
-            <span className="brand-sub">WP • Laravel • React</span>
-          </div>
+        <a href="#hero" className="navbar-brand" aria-label="Amar Abbas">
+          <span className="brand-logo-text">
+            Amar <span className="brand-logo-gradient">Abbas</span>
+            <span className="brand-logo-dot">.</span>
+          </span>
         </a>
 
         {/* Status Badge (Desktop) */}

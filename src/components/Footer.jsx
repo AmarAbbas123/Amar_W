@@ -3,7 +3,6 @@ import { personalInfo } from '../portfolioData';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './Icons';
 import { 
   ArrowUp, 
-  Terminal, 
   MessageSquare 
 } from 'lucide-react';
 import './Footer.css';
@@ -20,15 +19,12 @@ export default function Footer() {
         {/* Top Tier */}
         <div className="footer-top-row">
           <div className="footer-brand-col">
-            <div className="footer-brand">
-              <div className="brand-icon-box">
-                <Terminal size={18} />
-              </div>
-              <div>
-                <span className="brand-name">{personalInfo.name}</span>
-                <span className="brand-sub">WP • Laravel • React</span>
-              </div>
-            </div>
+            <a href="#hero" className="footer-brand" aria-label="Amar Abbas">
+              <span className="brand-logo-text">
+                Amar <span className="brand-logo-gradient">Abbas</span>
+                <span className="brand-logo-dot">.</span>
+              </span>
+            </a>
             <p className="footer-brand-tagline">
               Engineering lightning-fast WordPress architectures, robust Laravel APIs, and modern React web experiences.
             </p>
