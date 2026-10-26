@@ -98,8 +98,9 @@ export default function Navbar() {
           <a 
             href={personalInfo.resumeUrl} 
             className="btn btn-secondary btn-sm nav-cv-btn"
-            download
-            title="Download Curriculum Vitae"
+            target="_blank"
+            rel="noreferrer"
+            title="View & Download Curriculum Vitae"
           >
             <FileText size={15} />
             <span>Resume</span>
@@ -149,11 +150,12 @@ export default function Navbar() {
               <a 
                 href={personalInfo.resumeUrl} 
                 className="btn btn-secondary btn-sm"
-                download
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <FileText size={15} />
-                <span>Download Resume</span>
+                <span>View Resume</span>
               </a>
               <a 
                 href="#contact" 

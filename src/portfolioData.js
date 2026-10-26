@@ -15,11 +15,10 @@ export const personalInfo = {
   statusBadge: "Available for New Projects",
   email: "amarabbas1414@gmail.com",
   phone: "+92 3098915950",
-  resumeUrl: "#resume", // Link to your downloadable resume PDF
+  resumeUrl: "/Amar_Abbas_Resume.html",
   socials: {
     github: "https://github.com/AmarAbbas123",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    linkedin: "https://www.linkedin.com/in/amar-abbas/",
     whatsapp: "https://wa.me/+923098915950",
   },
   stats: [

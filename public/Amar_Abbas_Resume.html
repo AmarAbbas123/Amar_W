@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amar Abbas - Resume | WordPress, Laravel & React Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --border-color: #e2e8f0;
+      --bg-light: #f8fafc;
+      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--text-main);
+      background-color: #f1f5f9;
+      line-height: 1.55;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Floating Toolbar */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      color: #ffffff;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .toolbar-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #94a3b8;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #0369a1;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Resume Document Container */
+    .resume-wrapper {
+      max-width: 860px;
+      margin: 32px auto 60px;
+      background: #ffffff;
+      padding: 56px 64px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+
+    .header-name {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .header-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 18px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-main);
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 4px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .summary-text {
+      color: var(--text-muted);
+      font-size: 13.5px;
+      line-height: 1.65;
+      text-align: justify;
+    }
+
+    /* Skills Grid */
+    .skills-group {
+      margin-bottom: 8px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .skills-group strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    .skills-group span {
+      color: var(--text-muted);
+    }
+
+    /* Experience Items */
+    .experience-item {
+      margin-bottom: 18px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .role-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .company-name {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .experience-date {
+      font-size: 12.5px;
+      color: var(--text-light);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .experience-desc {
+      font-size: 12.5px;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 4px;
+      line-height: 1.55;
+    }
+
+    .tech-pill-row {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    .tech-pill-row strong {
+      color: var(--text-main);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
+    }
+
+    .project-card {
+      padding: 10px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: var(--bg-light);
+    }
+
+    .project-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .project-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .project-card-title a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .project-card-title a:hover {
+      text-decoration: underline;
+    }
+
+    .project-card-badge {
+      font-size: 10.5px;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .project-card-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Education Items */
+    .education-item {
+      margin-bottom: 12px;
+    }
+
+    .education-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .education-degree {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .education-school {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .education-date {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* Print Specific Styles */
+    @media print {
+      body {
+        background: #ffffff;
+        font-size: 11pt;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+      }
+
+      .header {
+        padding-bottom: 12px;
+        margin-bottom: 14px;
+      }
+
+      .section {
+        margin-bottom: 14px;
+        page-break-inside: avoid;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project-card {
+        border-color: #cbd5e1;
+        background: #ffffff;
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      @page {
+        margin: 1.2cm;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resume-wrapper {
+        margin: 16px auto;
+        padding: 28px 20px;
+      }
+
+      .toolbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+      }
+
+      .toolbar-actions {
+        justify-content: center;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Action Toolbar -->
+  <header class="toolbar">
+    <div class="toolbar-title">Amar Abbas &bull; Curriculum Vitae</div>
+    <div class="toolbar-actions">
+      <a href="/" class="btn btn-secondary">&larr; Back to Portfolio</a>
+      <a href="/Amar_Abbas_Resume.docx" download="Amar_Abbas_Resume.docx" class="btn btn-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Word (.docx)
+      </a>
+      <button onclick="window.print()" class="btn btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print / Save as PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- Printable Document Area -->
+  <main class="resume-wrapper">
+
+    <!-- Header -->
+    <header class="header">
+      <h1 class="header-name">Amar Abbas</h1>
+      <p class="header-title">WordPress, Laravel & React Web Developer</p>
+      <div class="contact-row">
+        <div class="contact-item">
+          <strong>Email:</strong>
+          <a href="mailto:amarabbas1414@gmail.com">amarabbas1414@gmail.com</a>
+        </div>
+        <div class="contact-item">&bull;</div>
+        <div class="contact-item">
+          <strong>Phone:</strong>
+          <a href="https://wa.me/+923098915950">+92 3098915950</a>
+        </div>
+        <div class="contact-item">&bull;</div>
+        <div class="contact-item">
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/amar-abbas/" target="_blank" rel="noreferrer">linkedin.com/in/amar-abbas</a>
+        </div>
+        <div class="contact-item">&bull;</div>
+        <div class="contact-item">
+          <strong>GitHub:</strong>
+          <a href="https://github.com/AmarAbbas123" target="_blank" rel="noreferrer">github.com/AmarAbbas123</a>
+        </div>
+        <div class="contact-item">&bull;</div>
+        <div class="contact-item">
+          <strong>Location:</strong> Pakistan (Worldwide / Remote)
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Results-driven Web Developer with 4+ years of hands-on experience building high-performance WordPress platforms, enterprise-grade Laravel web applications, and modern React frontends. Proven track record in developing secure telehealth booking portals, telecom site audit applications, and custom WooCommerce e-commerce platforms. Recognized for consistently delivering 95+ Google Lighthouse speed scores, robust technical & on-page SEO structures, and sub-second load times.
+      </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <h2 class="section-title">Core Technical Skills</h2>
+      <div class="skills-group">
+        <strong>CMS & WordPress:</strong>
+        <span>Custom Theme & Plugin Development, Elementor Pro, ACF Pro, WooCommerce, Gutenberg Custom Blocks, WP REST API, Speed Optimization, Security Hardening.</span>
+      </div>
+      <div class="skills-group">
+        <strong>Backend & APIs:</strong>
+        <span>Laravel (10 & 11), MVC Architecture, Eloquent ORM, MySQL Query Tuning, RESTful APIs, Laravel Sanctum Authentication, Queues & Redis Caching.</span>
+      </div>
+      <div class="skills-group">
+        <strong>Frontend Engineering:</strong>
+        <span>React.js (Hooks, State Management, SPA), JavaScript (ES6+), Tailwind CSS, Bootstrap 5, Alpine.js, HTML5, CSS3 / SCSS, Responsive Web Design.</span>
+      </div>
+      <div class="skills-group">
+        <strong>SEO & Performance:</strong>
+        <span>Technical SEO, Schema.org Structured Data, Rank Math SEO, Yoast SEO, Core Web Vitals, LiteSpeed Cache, Cloudflare CDN, WebP Optimization.</span>
+      </div>
+      <div class="skills-group">
+        <strong>DevOps & Tools:</strong>
+        <span>Git, GitHub CI/CD, Vite, Composer, npm, cPanel, MySQL, REST API Integrations.</span>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+      <h2 class="section-title">Professional Work Experience</h2>
+
+      <!-- Experience 1 -->
+      <article class="experience-item">
+        <div class="experience-header">
+          <span class="role-title">Software Engineer <span style="font-weight: normal; color: #64748b;">(Part-Time)</span> &bull; <a href="https://justmy.health/" target="_blank" class="company-name">JustMy.Health</a></span>
+          <span class="experience-date">Oct 2025 – Present | Remote</span>
+        </div>
+        <p class="experience-desc">Digital healthcare and telehealth web application facilitating online counselling, therapy, and practitioner consultation booking.</p>
+        <ul class="bullet-list">
+          <li>Engineered backend modules in Laravel for patient registration, practitioner scheduling, and appointment booking flows.</li>
+          <li>Optimized MySQL database queries and Eloquent relationships to reduce response latency on key health service endpoints.</li>
+          <li>Developed secure authentication mechanisms, CSRF protections, and role-based access control for patient and practitioner portals.</li>
+          <li>Collaborated on responsive UI components built with Tailwind CSS, Alpine.js, and Laravel Blade templates.</li>
+        </ul>
+        <div class="tech-pill-row">
+          <strong>Tech Stack:</strong> Laravel, MySQL, Tailwind CSS, Alpine.js, Laravel Blade, REST APIs, Vite.
+        </div>
+      </article>
+
+      <!-- Experience 2 -->
+      <article class="experience-item">
+        <div class="experience-header">
+          <span class="role-title">Junior Software Engineer <span style="font-weight: normal; color: #64748b;">(Full-Time)</span> &bull; <span class="company-name">AliLogics</span></span>
+          <span class="experience-date">2023 – Present | Hybrid</span>
+        </div>
+        <p class="experience-desc">Digital agency specializing in bespoke WordPress websites, Elementor Pro visual engineering, and technical search visibility.</p>
+        <ul class="bullet-list">
+          <li>Built and customized pixel-perfect, high-converting websites and landing pages using Elementor Pro and ACF Pro.</li>
+          <li>Implemented technical and on-page SEO best practices (Schema markup, XML sitemaps, meta tags, and indexing optimizations) across client websites.</li>
+          <li>Optimized site responsiveness, Core Web Vitals, and page speed to consistently achieve 95+ PageSpeed scores and reduce bounce rates.</li>
+          <li>Configured SEO plugins (Rank Math / Yoast SEO), Google Search Console properties, and structured breadcrumb architectures.</li>
+          <li>Assisted senior engineers with website migrations, database management, and ongoing technical support.</li>
+        </ul>
+        <div class="tech-pill-row">
+          <strong>Tech Stack:</strong> WordPress, Elementor Pro, Technical SEO, Schema Markup, Rank Math / Yoast, WooCommerce, ACF Pro, MySQL.
+        </div>
+      </article>
+
+      <!-- Experience 3 -->
+      <article class="experience-item">
+        <div class="experience-header">
+          <span class="role-title">Junior Front-End Developer <span style="font-weight: normal; color: #64748b;">(Part-Time)</span> &bull; <a href="https://www.securesiteaudit.com/" target="_blank" class="company-name">Secure Site Audit</a></span>
+          <span class="experience-date">Aug 2024 – Jun 2025 | Remote</span>
+        </div>
+        <p class="experience-desc">Enterprise Laravel web application (securesiteaudit.com) for telecom site inspection, tower auditing, and automated compliance reporting.</p>
+        <ul class="bullet-list">
+          <li>Engineered responsive auditor dashboards and client-facing interfaces for the Secure Site Audit Laravel web application.</li>
+          <li>Built interactive inspection data entry checklists, file uploads, and tower evaluation modules using JavaScript and Bootstrap 5.</li>
+          <li>Integrated frontend views and AJAX interactions with backend Laravel RESTful controllers and validation rules.</li>
+          <li>Ensured mobile and tablet responsiveness for on-site field auditors conducting live telecom inspections.</li>
+        </ul>
+        <div class="tech-pill-row">
+          <strong>Tech Stack:</strong> Laravel, JavaScript, Bootstrap 5, Laravel Blade, HTML5 / CSS3, REST APIs.
+        </div>
+      </article>
+    </section>
+
+    <!-- Key Projects Grid -->
+    <section class="section">
+      <h2 class="section-title">Featured Client Projects & Web Applications</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-card-title"><a href="https://www.securesiteaudit.com/" target="_blank">Secure Site Audit</a></span>
+            <span class="project-card-badge">Laravel App</span>
+          </div>
+          <p class="project-card-desc">Enterprise telecom site audit and inspection tracking web application with automated compliance reporting.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-card-title"><a href="https://justmy.health/" target="_blank">JustMy.Health</a></span>
+            <span class="project-card-badge">Laravel Web</span>
+          </div>
+          <p class="project-card-desc">Telehealth booking portal for online counselling and therapy sessions with automated scheduling.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-card-title"><a href="https://telecomsiteaudit.com/" target="_blank">Telecom Site Audit</a></span>
+            <span class="project-card-badge">WordPress</span>
+          </div>
+          <p class="project-card-desc">Public showcase platform for telecom audit solutions with Yoast SEO optimization and lead funnels.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-card-title"><a href="https://visualsoft-inc.com/" target="_blank">VisualSoft Inc.</a></span>
+            <span class="project-card-badge">WordPress</span>
+          </div>
+          <p class="project-card-desc">Global enterprise technology & AI solutions portal engineered with Elementor Pro and high-performance assets.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-card-title"><a href="https://designermetals.com/" target="_blank">Designer Metals</a></span>
+            <span class="project-card-badge">WooCommerce</span>
+          </div>
+          <p class="project-card-desc">Metal building and carport product catalog with Rank Math SEO schema and quote request funnels.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-card-title"><a href="https://sunguarddesigns.com.au/" target="_blank">Sun Guard Design</a></span>
+            <span class="project-card-badge">WordPress</span>
+          </div>
+          <p class="project-card-desc">Australian custom shading solutions showroom with responsive product displays and consultation booking.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-card-title"><a href="https://christianbehr.net/" target="_blank">Christian Behr</a></span>
+            <span class="project-card-badge">WordPress</span>
+          </div>
+          <p class="project-card-desc">German executive strategy consultancy portal with LiteSpeed server caching and sub-second TTFB.</p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-card-title"><a href="https://www.camping-herzog.de/" target="_blank">Camping Herzog</a></span>
+            <span class="project-card-badge">WordPress</span>
+          </div>
+          <p class="project-card-desc">German lakeside holiday campground and apartment booking inquiry portal with GDPR privacy compliance.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education & Certifications</h2>
+      
+      <div class="education-item">
+        <div class="education-header">
+          <span class="education-degree">Bachelor of Science in Computer Science / Information Technology</span>
+          <span class="education-date">2018 – 2022</span>
+        </div>
+        <div class="education-school">University of Engineering and Technology (UET) Peshawar</div>
+      </div>
+
+      <div class="education-item">
+        <div class="education-header">
+          <span class="education-degree">PHP with Laravel for Beginners - Become a Master in Laravel</span>
+          <span class="education-date">2024</span>
+        </div>
+        <div class="education-school">Udemy Professional Certification</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { personalInfo } from '../portfolioData';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './Icons';
-import { 
-  ArrowUp, 
-  MessageSquare 
+import {
+  ArrowUp,
+  MessageSquare
 } from 'lucide-react';
 import './Footer.css';
 
@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="footer-wrapper">
       <div className="container">
-        
+
         {/* Top Tier */}
         <div className="footer-top-row">
           <div className="footer-brand-col">
@@ -55,11 +55,7 @@ export default function Footer() {
                   <LinkedinIcon size={18} />
                 </a>
               )}
-              {personalInfo.socials.twitter && (
-                <a href={personalInfo.socials.twitter} target="_blank" rel="noreferrer" className="footer-social-btn" title="Twitter">
-                  <TwitterIcon size={18} />
-                </a>
-              )}
+
               {personalInfo.socials.whatsapp && (
                 <a href={personalInfo.socials.whatsapp} target="_blank" rel="noreferrer" className="footer-social-btn" title="WhatsApp">
                   <MessageSquare size={18} />
@@ -75,7 +71,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {personalInfo.name}. All rights reserved. Crafted with React, Vite & Vanilla CSS.
           </p>
 
-          <button 
+          <button
             className="back-to-top-btn"
             onClick={scrollToTop}
             title="Scroll to Top"
