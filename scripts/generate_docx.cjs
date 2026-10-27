@@ -141,6 +141,9 @@ async function generate() {
             alignment: AlignmentType.LEFT,
             spacing: { before: 0, after: 160 },
             children: [
+              new TextRun({ text: "Portfolio: ", bold: true, size: 20 }),
+              createLink("amar-abbas.vercel.app", "https://amar-abbas.vercel.app/"),
+              new TextRun({ text: " | ", size: 20 }),
               createLink("amarabbas1414@gmail.com", "mailto:amarabbas1414@gmail.com"),
               new TextRun({ text: " | +92 309 8915950 | ", size: 20 }),
               createLink("linkedin.com/in/amar-abbas", "https://www.linkedin.com/in/amar-abbas/"),

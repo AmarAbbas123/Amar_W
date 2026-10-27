@@ -16,7 +16,9 @@ export const personalInfo = {
   email: "amarabbas1414@gmail.com",
   phone: "+92 309 8915950",
   resumeUrl: "/Amar_Abbas_Resume.html",
+  portfolioUrl: "https://amar-abbas.vercel.app/",
   socials: {
+    portfolio: "https://amar-abbas.vercel.app/",
     github: "https://github.com/AmarAbbas123",
     linkedin: "https://www.linkedin.com/in/amar-abbas/",
     whatsapp: "https://wa.me/+923098915950",
