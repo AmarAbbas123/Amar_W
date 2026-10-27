@@ -1,89 +1,71 @@
 # Amar Abbas
-**WordPress, Laravel & React Web Developer**
+**Software Engineer**
 
 - **Email:** [amarabbas1414@gmail.com](mailto:amarabbas1414@gmail.com)
-- **Phone / WhatsApp:** [+92 3098915950](https://wa.me/+923098915950)
+- **Phone:** [+92 309 8915950](https://wa.me/+923098915950)
 - **LinkedIn:** [linkedin.com/in/amar-abbas](https://www.linkedin.com/in/amar-abbas/)
 - **GitHub:** [github.com/AmarAbbas123](https://github.com/AmarAbbas123)
-- **Location:** Pakistan (Available Worldwide / Remote)
 
 ---
 
 ## Professional Summary
-Results-driven Web Developer with 4+ years of hands-on experience building high-performance WordPress platforms, enterprise-grade Laravel web applications, and dynamic React frontends. Proven track record in developing secure telehealth booking portals, telecom site audit applications, and custom WooCommerce e-commerce platforms. Recognized for achieving 95+ Google Lighthouse speed scores, robust technical & on-page SEO structures, and seamless API integrations.
+
+A passionate Software Engineer 🚀 having experience in building web applications with JavaScript / TypeScript / React.js / Laravel and some other modern libraries and frameworks. I also have hands-on experience with WordPress and Digital Marketing. Strong engineering professional with a Bachelor's degree focused in Computer Science from UET Peshawar. I love to solve problems and develop innovative solutions for those problems.
 
 ---
 
-## Core Technical Skills
+## Technical Skills
 
-- **CMS & WordPress:** Custom Theme & Plugin Engineering, Elementor Pro, ACF Pro (Advanced Custom Fields), WooCommerce, Gutenberg Blocks, WP REST API, Speed Optimization, Security Hardening.
-- **Backend & APIs:** Laravel (10 & 11), MVC Architecture, Eloquent ORM, MySQL Query Optimization, RESTful APIs, Laravel Sanctum Authentication, Queues & Redis Caching.
-- **Frontend Development:** React.js (Hooks, State Management, SPA), JavaScript (ES6+), Tailwind CSS, Bootstrap 5, Alpine.js, HTML5, CSS3 / SCSS, Responsive Web Design.
-- **SEO & Performance:** Technical SEO, Schema.org Structured Data, Rank Math SEO, Yoast SEO, Core Web Vitals, LiteSpeed Cache, Cloudflare CDN, WebP Optimization.
-- **Tools & Environments:** Git, GitHub CI/CD, Vite, Composer, npm, cPanel, Apache, MySQL.
-
----
-
-## Professional Work Experience
-
-### **Software Engineer (Part-Time)**
-**JustMy.Health** | *Remote* | **Oct 2025 – Present**
-*Digital telehealth platform facilitating online counselling, therapy, physiotherapy, and practitioner consultation booking.*
-- Engineered robust backend modules using **Laravel** for patient onboarding, practitioner scheduling, and appointment booking workflows.
-- Optimized MySQL database schemas and Eloquent ORM queries to ensure sub-second response times across high-traffic health endpoints.
-- Implemented secure role-based access control, CSRF protections, and encrypted patient data handling.
-- Built interactive, accessible frontend components using **Tailwind CSS**, **Alpine.js**, and Laravel Blade.
-- **Technologies:** Laravel, MySQL, Tailwind CSS, Alpine.js, Laravel Blade, RESTful APIs, Vite.
-
-### **Junior Software Engineer (Full-Time)**
-**AliLogics** | *Hybrid / On-site* | **2023 – Present**
-*Digital agency delivering bespoke WordPress, e-commerce, and technical search solutions.*
-- Developed and deployed multiple high-converting custom WordPress websites and landing pages using **Elementor Pro** and **ACF Pro**.
-- Executed comprehensive technical and on-page SEO architectures (Schema.org JSON-LD markup, meta tag optimization, XML sitemaps, breadcrumbs, and indexing enhancements).
-- Optimized Core Web Vitals and PageSpeed metrics across client websites, consistently delivering 95+ performance scores and sub-second load times.
-- Configured and managed SEO implementations using Rank Math and Yoast SEO alongside Google Search Console verification.
-- Handled website migrations, server optimizations, and technical client support.
-- **Technologies:** WordPress, Elementor Pro, Technical SEO, Schema Markup, Rank Math / Yoast, WooCommerce, ACF Pro, HTML5/CSS3, MySQL.
-
-### **Junior Front-End Developer (Part-Time)**
-**Secure Site Audit** | *Remote* | **Aug 2024 – Jun 2025**
-*Enterprise Laravel web application (`securesiteaudit.com`) for telecom tower inspection tracking and compliance reporting.*
-- Built responsive auditor dashboards, real-time inspection status trackers, and tower evaluation modules.
-- Engineered dynamic data entry checklists with photo/document upload pipelines utilizing modern JavaScript and Bootstrap 5.
-- Connected client-side interfaces with backend Laravel RESTful controllers and validation pipelines.
-- Ensured full cross-device compatibility and mobile optimization for on-site field auditors.
-- **Technologies:** Laravel, JavaScript, Bootstrap 5, Laravel Blade, HTML5, CSS3, REST APIs.
+- **Back end:** PHP, Laravel 10 & 11, MVC, Eloquent ORM, MySQL query optimization, REST APIs, Laravel Sanctum, queues, Redis caching
+- **WordPress & E-commerce:** Custom themes and plugins, WooCommerce, Elementor Pro, ACF Pro, Gutenberg blocks, WP REST API, security hardening, site migrations
+- **Front end:** React.js (Hooks, SPA), JavaScript (ES6+), Tailwind CSS, Bootstrap 5, Alpine.js, HTML5, CSS3/SCSS, responsive and mobile-first design
+- **Technical SEO & Speed:** Schema.org structured data, XML sitemaps, Rank Math, Yoast, Google Search Console, Core Web Vitals, LiteSpeed Cache, Cloudflare CDN
+- **Tools:** Git, GitHub CI/CD, Vite, Composer, npm, cPanel
 
 ---
 
-## Key Featured Projects
+## Professional Experience
 
-- **Secure Site Audit Web Application** ([securesiteaudit.com](https://www.securesiteaudit.com/))
-  *Enterprise Laravel platform for telecom tower inspections, audit tracking, and automated compliance reporting.*
-- **JustMy.Health Telehealth Platform** ([justmy.health](https://justmy.health/))
-  *Laravel-powered digital health and telehealth application connecting patients with certified therapists and physiotherapists.*
-- **Telecom Site Audit Showcase** ([telecomsiteaudit.com](https://telecomsiteaudit.com/))
-  *Public marketing platform featuring responsive custom WordPress templates and technical Yoast SEO integration.*
-- **VisualSoft Inc.** ([visualsoft-inc.com](https://visualsoft-inc.com/))
-  *Global enterprise corporate portal built with WordPress and Elementor Pro serving multinational tech clients.*
-- **Designer Metals** ([designermetals.com](https://designermetals.com/))
-  *Commercial metal building and garage solutions catalog with Rank Math SEO and custom quote request funnels.*
-- **Sun Guard Design Australia** ([sunguarddesigns.com.au](https://sunguarddesigns.com.au/))
-  *Australian bespoke shading and curtain showroom portal featuring responsive galleries and localized SEO.*
-- **Christian Behr Advisory** ([christianbehr.net](https://christianbehr.net/))
-  *German strategic advisory platform engineered with Hello Elementor, LiteSpeed server cache, and sub-second TTFB.*
-- **Altmühlsee Camping Herzog** ([camping-herzog.de](https://www.camping-herzog.de/))
-  *German lakeside holiday campsite and apartment booking inquiry portal with GDPR-compliant privacy standards.*
-- **Heather Harries Education Hub** ([heatherharries.com](https://heatherharries.com/))
-  *Educational learning and community platform with WooCommerce book purchases and course calendar integration.*
-- **Everon Solutions Australia** ([everonsolutions.com.au](https://everonsolutions.com.au/))
-  *Corporate sustainable enterprise website engineered for Australian commercial clients.*
+### **Software Engineer (Part-Time)** | JustMy.Health (Remote) | **Oct 2025 – Present**
+*Telehealth platform for online counselling, therapy, physiotherapy and practitioner booking.*
+- Built the Laravel booking engine that connects patients with counsellors, therapists and physiotherapists, covering onboarding, practitioner availability and appointment scheduling
+- Tuned MySQL queries and Eloquent relationships on booking-critical endpoints to keep response times under one second
+- Protected patient and practitioner portals with role-based access control, secure authentication and CSRF protection for sensitive health-related data
+- Delivered accessible, responsive interfaces with Tailwind CSS, Alpine.js and Blade, bundled with Vite
+- **Tech:** Laravel, MySQL, Tailwind CSS, Alpine.js, Blade, REST APIs, Vite
+
+### **Software Engineer (Full-Time)** | AliLogics | **June 2023 – Sep 2025**
+- Developed and deployed 10+ custom WordPress websites across e-commerce, education, building products and hospitality, from design to launch and support
+- Built custom themes, plugins and ACF Pro content structures, and turned designs into responsive pages with Elementor Pro, HTML, CSS and JavaScript
+- Delivered WooCommerce features including a bookstore with course calendar and custom quote-request funnels
+- Reached 95+ PageSpeed scores and set up technical SEO (schema, sitemaps, Rank Math / Yoast) on every build
+- Handled site migrations, database management and security hardening
+- **Tech:** WordPress, PHP, WooCommerce, Elementor Pro, ACF Pro, JavaScript, MySQL
+
+### **Junior Front-End Developer (Part-Time)** | Secure Site Audit (Remote) | **Aug 2024 – Jun 2025**
+*Enterprise Laravel application for telecom tower auditing, inspection tracking and compliance reporting.*
+- Built auditor dashboards and client-facing views used to track telecom tower inspections and compliance reporting
+- Created inspection checklists and photo/file upload flows in JavaScript and Bootstrap 5, designed for field auditors working on site
+- Connected front-end views to Laravel REST controllers and validation rules
+- Made every screen work on mobile and tablet for live inspections
+- **Tech:** Laravel, JavaScript, Bootstrap 5, Blade, HTML5/CSS3, REST APIs
+
+---
+
+## Selected Projects
+
+- **JustMy.Health** ([justmy.health](https://justmy.health/)): Laravel telehealth platform for online appointments, practitioner scheduling and secure patient portals
+- **Secure Site Audit** ([securesiteaudit.com](https://www.securesiteaudit.com/)): Laravel application for telecom tower inspections with automated compliance reports
+- **Heather Harries Education** ([heatherharries.com](https://heatherharries.com/)): WooCommerce bookstore and course calendar for an education business
+- **Designer Metals** ([designermetals.com](https://designermetals.com/)): Product catalog with Rank Math SEO and custom quote-request funnels
+- **VisualSoft Inc.** ([visualsoft-inc.com](https://visualsoft-inc.com/)): WordPress and Elementor Pro site for an enterprise AI company
+- **Christian Behr Advisory** ([christianbehr.net](https://christianbehr.net/)): German advisory site on Hello Elementor, tuned with LiteSpeed Cache
+- **Telecom Site Audit** ([telecomsiteaudit.com](https://telecomsiteaudit.com/)): Yoast-optimized marketing site for telecom audit services
+- **Also delivered:** Sun Guard Designs ([sunguarddesigns.com.au](https://sunguarddesigns.com.au/)), Camping Herzog ([camping-herzog.de](https://www.camping-herzog.de/)), Everon Solutions ([everonsolutions.com.au](https://everonsolutions.com.au/))
 
 ---
 
 ## Education & Certifications
 
-- **Bachelor of Science in Computer Science / Information Technology**
-  *University of Engineering and Technology (UET) Peshawar* | 2018 – 2022
-- **PHP with Laravel for Beginners - Master in Laravel**
-  *Udemy Professional Certification* | 2024
+- **BS in Computer Science / Information Technology** | University of Engineering and Technology (UET), Peshawar | **2018 – 2022**
+- **PHP with Laravel for Beginners** | Udemy | **2024**

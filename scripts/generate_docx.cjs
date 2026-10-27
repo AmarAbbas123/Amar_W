@@ -5,7 +5,6 @@ const {
   Packer,
   Paragraph,
   TextRun,
-  HeadingLevel,
   ExternalHyperlink,
   AlignmentType,
   BorderStyle
@@ -13,18 +12,18 @@ const {
 
 function createHeading(text) {
   return new Paragraph({
-    spacing: { before: 240, after: 100 },
+    spacing: { before: 200, after: 80 },
     border: {
       bottom: {
-        color: "06B6D4",
+        color: "0F172A",
         space: 4,
         value: BorderStyle.SINGLE,
-        size: 12,
+        size: 10,
       },
     },
     children: [
       new TextRun({
-        text: text.toUpperCase(),
+        text: text,
         bold: true,
         size: 24, // 12pt
         font: "Calibri",
@@ -43,7 +42,7 @@ function createBullet(text, boldPrefix = "") {
         bold: true,
         size: 20, // 10pt
         font: "Calibri",
-        color: "1E293B",
+        color: "0F172A",
       })
     );
   }
@@ -58,7 +57,7 @@ function createBullet(text, boldPrefix = "") {
 
   return new Paragraph({
     bullet: { level: 0 },
-    spacing: { before: 40, after: 40 },
+    spacing: { before: 30, after: 30 },
     children: children,
   });
 }
@@ -83,7 +82,7 @@ async function generate() {
   const doc = new Document({
     creator: "Amar Abbas",
     title: "Amar Abbas - Resume",
-    description: "WordPress, Laravel & React Web Developer Resume",
+    description: "Software Engineer Resume",
     styles: {
       default: {
         document: {
@@ -99,7 +98,7 @@ async function generate() {
         properties: {
           page: {
             margin: {
-              top: 720, // 0.5 in
+              top: 720,
               right: 720,
               bottom: 720,
               left: 720,
@@ -109,13 +108,13 @@ async function generate() {
         children: [
           // Name Header
           new Paragraph({
-            alignment: AlignmentType.CENTER,
-            spacing: { before: 0, after: 60 },
+            alignment: AlignmentType.LEFT,
+            spacing: { before: 0, after: 40 },
             children: [
               new TextRun({
-                text: "AMAR ABBAS",
+                text: "Amar Abbas",
                 bold: true,
-                size: 38, // 19pt
+                size: 36, // 18pt
                 font: "Calibri",
                 color: "0F172A",
               }),
@@ -124,41 +123,28 @@ async function generate() {
 
           // Title
           new Paragraph({
-            alignment: AlignmentType.CENTER,
-            spacing: { before: 0, after: 120 },
+            alignment: AlignmentType.LEFT,
+            spacing: { before: 0, after: 80 },
             children: [
               new TextRun({
-                text: "WordPress, Laravel & React Web Developer",
+                text: "Software Engineer",
                 bold: true,
                 size: 24, // 12pt
                 font: "Calibri",
-                color: "0284C7",
+                color: "0F172A",
               }),
             ],
           }),
 
           // Contact Row
           new Paragraph({
-            alignment: AlignmentType.CENTER,
-            spacing: { before: 0, after: 200 },
+            alignment: AlignmentType.LEFT,
+            spacing: { before: 0, after: 160 },
             children: [
-              new TextRun({ text: "Email: ", bold: true, size: 20 }),
               createLink("amarabbas1414@gmail.com", "mailto:amarabbas1414@gmail.com"),
-              new TextRun({ text: "  |  Phone / WhatsApp: ", bold: true, size: 20 }),
-              createLink("+92 3098915950", "https://wa.me/+923098915950"),
-              new TextRun({ text: "  |  Location: ", bold: true, size: 20 }),
-              new TextRun({ text: "Pakistan (Remote / Worldwide)", size: 20 }),
-            ],
-          }),
-
-          // Links Row
-          new Paragraph({
-            alignment: AlignmentType.CENTER,
-            spacing: { before: 0, after: 220 },
-            children: [
-              new TextRun({ text: "LinkedIn: ", bold: true, size: 20 }),
+              new TextRun({ text: " | +92 309 8915950 | ", size: 20 }),
               createLink("linkedin.com/in/amar-abbas", "https://www.linkedin.com/in/amar-abbas/"),
-              new TextRun({ text: "  |  GitHub: ", bold: true, size: 20 }),
+              new TextRun({ text: " | ", size: 20 }),
               createLink("github.com/AmarAbbas123", "https://github.com/AmarAbbas123"),
             ],
           }),
@@ -169,7 +155,7 @@ async function generate() {
             spacing: { before: 60, after: 120 },
             children: [
               new TextRun({
-                text: "Results-driven Web Developer with 4+ years of hands-on experience architecting high-performance WordPress platforms, enterprise-grade Laravel web applications, and modern React frontends. Proven track record building secure telehealth booking portals, telecom site audit applications, and custom WooCommerce e-commerce platforms. Recognized for consistently achieving 95+ Google Lighthouse speed scores, robust technical & on-page SEO structures, and sub-second loading speeds.",
+                text: "A passionate Software Engineer 🚀 having experience in building web applications with JavaScript / TypeScript / React.js / Laravel and some other modern libraries and frameworks. I also have hands-on experience with WordPress and Digital Marketing. Strong engineering professional with a Bachelor's degree focused in Computer Science from UET Peshawar. I love to solve problems and develop innovative solutions for those problems.",
                 size: 20,
                 font: "Calibri",
                 color: "334155",
@@ -180,162 +166,121 @@ async function generate() {
           // Technical Skills
           createHeading("Technical Skills"),
           createBullet(
-            "Custom Theme & Plugin Development, Elementor Pro, ACF Pro, WooCommerce, Gutenberg Blocks, WP REST API, Speed Optimization, Security Hardening.",
-            "CMS & WordPress:"
+            "PHP, Laravel 10 & 11, MVC, Eloquent ORM, MySQL query optimization, REST APIs, Laravel Sanctum, queues, Redis caching",
+            "Back end:"
           ),
           createBullet(
-            "Laravel (10 & 11), MVC Architecture, Eloquent ORM, MySQL Query Optimization, RESTful APIs, Laravel Sanctum Authentication, Queues & Redis Caching.",
-            "Backend & APIs:"
+            "Custom themes and plugins, WooCommerce, Elementor Pro, ACF Pro, Gutenberg blocks, WP REST API, security hardening, site migrations",
+            "WordPress & E-commerce:"
           ),
           createBullet(
-            "React.js (Hooks, State Management, SPA), JavaScript (ES6+), Tailwind CSS, Bootstrap 5, Alpine.js, HTML5, CSS3 / SCSS, Responsive Web Design.",
-            "Frontend Engineering:"
+            "React.js (Hooks, SPA), JavaScript (ES6+), Tailwind CSS, Bootstrap 5, Alpine.js, HTML5, CSS3/SCSS, responsive and mobile-first design",
+            "Front end:"
           ),
           createBullet(
-            "Technical SEO, Schema.org Structured Data, Rank Math SEO, Yoast SEO, Core Web Vitals Optimization, LiteSpeed Cache, Cloudflare CDN.",
-            "SEO & Performance:"
+            "Schema.org structured data, XML sitemaps, Rank Math, Yoast, Google Search Console, Core Web Vitals, LiteSpeed Cache, Cloudflare CDN",
+            "Technical SEO & Speed:"
           ),
           createBullet(
-            "Git, GitHub CI/CD, Vite, Composer, npm, cPanel, MySQL, REST API Integrations.",
-            "DevOps & Tools:"
+            "Git, GitHub CI/CD, Vite, Composer, npm, cPanel",
+            "Tools:"
           ),
 
-          // Work Experience
-          createHeading("Professional Work Experience"),
+          // Professional Experience
+          createHeading("Professional Experience"),
 
           // Role 1
           new Paragraph({
-            spacing: { before: 100, after: 40 },
+            spacing: { before: 80, after: 30 },
             children: [
-              new TextRun({ text: "Software Engineer (Part-Time)  |  ", bold: true, size: 22, color: "0F172A" }),
-              new TextRun({ text: "JustMy.Health (Remote)", bold: true, size: 22, color: "0284C7" }),
-              new TextRun({ text: "\tOct 2025 – Present", italic: true, size: 20, color: "64748B" }),
+              new TextRun({ text: "Software Engineer (Part-Time) | JustMy.Health (Remote) | Oct 2025 – Present", bold: true, size: 21, color: "0F172A" }),
             ],
           }),
           new Paragraph({
-            spacing: { before: 0, after: 60 },
+            spacing: { before: 0, after: 40 },
             children: [
               new TextRun({
-                text: "Digital telehealth platform facilitating online counselling, therapy, physiotherapy, and practitioner consultation booking.",
+                text: "Telehealth platform for online counselling, therapy, physiotherapy and practitioner booking.",
                 italic: true,
                 size: 19,
                 color: "475569",
               }),
             ],
           }),
-          createBullet("Engineered robust backend modules in Laravel for patient onboarding, practitioner scheduling, and appointment booking workflows."),
-          createBullet("Optimized MySQL database queries and Eloquent relationships to ensure sub-second response times across critical telehealth endpoints."),
-          createBullet("Developed secure authentication mechanisms, CSRF protections, and role-based access control for patient and practitioner account portals."),
-          createBullet("Built interactive, accessible frontend components utilizing Tailwind CSS, Alpine.js, and Laravel Blade templates."),
-          createBullet("Laravel, MySQL, Tailwind CSS, Alpine.js, Laravel Blade, RESTful APIs, Vite.", "Key Technologies:"),
+          createBullet("Built the Laravel booking engine that connects patients with counsellors, therapists and physiotherapists, covering onboarding, practitioner availability and appointment scheduling"),
+          createBullet("Tuned MySQL queries and Eloquent relationships on booking-critical endpoints to keep response times under one second"),
+          createBullet("Protected patient and practitioner portals with role-based access control, secure authentication and CSRF protection for sensitive health-related data"),
+          createBullet("Delivered accessible, responsive interfaces with Tailwind CSS, Alpine.js and Blade, bundled with Vite"),
+          createBullet("Laravel, MySQL, Tailwind CSS, Alpine.js, Blade, REST APIs, Vite", "Tech:"),
 
           // Role 2
           new Paragraph({
-            spacing: { before: 160, after: 40 },
+            spacing: { before: 120, after: 30 },
             children: [
-              new TextRun({ text: "Junior Software Engineer (Full-Time)  |  ", bold: true, size: 22, color: "0F172A" }),
-              new TextRun({ text: "AliLogics", bold: true, size: 22, color: "0284C7" }),
-              new TextRun({ text: "\t2023 – Present", italic: true, size: 20, color: "64748B" }),
+              new TextRun({ text: "Software Engineer (Full-Time) | AliLogics | June 2023 – Sep 2025", bold: true, size: 21, color: "0F172A" }),
             ],
           }),
-          new Paragraph({
-            spacing: { before: 0, after: 60 },
-            children: [
-              new TextRun({
-                text: "Digital agency delivering bespoke WordPress, e-commerce, and technical search solutions.",
-                italic: true,
-                size: 19,
-                color: "475569",
-              }),
-            ],
-          }),
-          createBullet("Built, customized, and deployed pixel-perfect, high-converting websites and landing pages using Elementor Pro and ACF Pro."),
-          createBullet("Executed technical and on-page SEO best practices (Schema markup, XML sitemaps, meta optimization, and breadcrumb structures) across diverse client websites."),
-          createBullet("Optimized website Core Web Vitals and page speed to consistently deliver 95+ PageSpeed scores and reduce bounce rates."),
-          createBullet("Configured SEO plugins (Rank Math / Yoast SEO), Google Search Console properties, and structured data schemas."),
-          createBullet("Assisted with website migrations, database management, and ongoing technical support."),
-          createBullet("WordPress, Elementor Pro, Technical SEO, Schema Markup, Rank Math / Yoast, WooCommerce, ACF Pro, MySQL.", "Key Technologies:"),
+          createBullet("Developed and deployed 10+ custom WordPress websites across e-commerce, education, building products and hospitality, from design to launch and support"),
+          createBullet("Built custom themes, plugins and ACF Pro content structures, and turned designs into responsive pages with Elementor Pro, HTML, CSS and JavaScript"),
+          createBullet("Delivered WooCommerce features including a bookstore with course calendar and custom quote-request funnels"),
+          createBullet("Reached 95+ PageSpeed scores and set up technical SEO (schema, sitemaps, Rank Math / Yoast) on every build"),
+          createBullet("Handled site migrations, database management and security hardening"),
+          createBullet("WordPress, PHP, WooCommerce, Elementor Pro, ACF Pro, JavaScript, MySQL", "Tech:"),
 
           // Role 3
           new Paragraph({
-            spacing: { before: 160, after: 40 },
+            spacing: { before: 120, after: 30 },
             children: [
-              new TextRun({ text: "Junior Front-End Developer (Part-Time)  |  ", bold: true, size: 22, color: "0F172A" }),
-              new TextRun({ text: "Secure Site Audit (Remote)", bold: true, size: 22, color: "0284C7" }),
-              new TextRun({ text: "\tAug 2024 – Jun 2025", italic: true, size: 20, color: "64748B" }),
+              new TextRun({ text: "Junior Front-End Developer (Part-Time) | Secure Site Audit (Remote) | Aug 2024 – Jun 2025", bold: true, size: 21, color: "0F172A" }),
             ],
           }),
           new Paragraph({
-            spacing: { before: 0, after: 60 },
+            spacing: { before: 0, after: 40 },
             children: [
               new TextRun({
-                text: "Enterprise Laravel web application (securesiteaudit.com) for telecom site and tower auditing, inspection tracking, and compliance reporting.",
+                text: "Enterprise Laravel application for telecom tower auditing, inspection tracking and compliance reporting.",
                 italic: true,
                 size: 19,
                 color: "475569",
               }),
             ],
           }),
-          createBullet("Engineered responsive auditor dashboards and client-facing interfaces for the Secure Site Audit Laravel web application."),
-          createBullet("Built interactive inspection data entry checklists and file/photo upload pipelines using JavaScript and Bootstrap 5."),
-          createBullet("Integrated frontend views with backend Laravel RESTful controllers and validation rules."),
-          createBullet("Ensured mobile and tablet responsiveness for on-site field auditors conducting live telecom inspections."),
-          createBullet("Laravel, JavaScript, Bootstrap 5, Laravel Blade, HTML5/CSS3, REST APIs.", "Key Technologies:"),
+          createBullet("Built auditor dashboards and client-facing views used to track telecom tower inspections and compliance reporting"),
+          createBullet("Created inspection checklists and photo/file upload flows in JavaScript and Bootstrap 5, designed for field auditors working on site"),
+          createBullet("Connected front-end views to Laravel REST controllers and validation rules"),
+          createBullet("Made every screen work on mobile and tablet for live inspections"),
+          createBullet("Laravel, JavaScript, Bootstrap 5, Blade, HTML5/CSS3, REST APIs", "Tech:"),
 
-          // Featured Projects
-          createHeading("Featured Client Projects & Web Applications"),
-          createBullet("Enterprise Laravel telecom site and tower auditing application with automated compliance reporting.", "Secure Site Audit (securesiteaudit.com):"),
-          createBullet("Laravel telehealth platform facilitating online appointments, practitioner scheduling, and secure portals.", "JustMy.Health (justmy.health):"),
-          createBullet("Public marketing platform showcasing telecom audit services with Yoast SEO optimization.", "Telecom Site Audit (telecomsiteaudit.com):"),
-          createBullet("Enterprise AI & technology company website built with WordPress and Elementor Pro.", "VisualSoft Inc. (visualsoft-inc.com):"),
-          createBullet("Commercial metal building products catalog with Rank Math SEO and custom quote request funnels.", "Designer Metals (designermetals.com):"),
-          createBullet("Australian custom shading and blinds showcase portal with localized SEO.", "Sun Guard Design (sunguarddesigns.com.au):"),
-          createBullet("German executive advisory platform engineered with Hello Elementor and LiteSpeed Cache tuning.", "Christian Behr Advisory (christianbehr.net):"),
-          createBullet("German lakeside campsite and holiday apartment booking inquiry portal.", "Camping Herzog (camping-herzog.de):"),
-          createBullet("Learning hub with WooCommerce bookstore and course calendar integration.", "Heather Harries Education (heatherharries.com):"),
-          createBullet("Corporate sustainable enterprise platform for Australian commercial clients.", "Everon Solutions (everonsolutions.com.au):"),
+          // Selected Projects
+          createHeading("Selected Projects"),
+          createBullet("Laravel telehealth platform for online appointments, practitioner scheduling and secure patient portals", "JustMy.Health (justmy.health):"),
+          createBullet("Laravel application for telecom tower inspections with automated compliance reports", "Secure Site Audit (securesiteaudit.com):"),
+          createBullet("WooCommerce bookstore and course calendar for an education business", "Heather Harries Education (heatherharries.com):"),
+          createBullet("Product catalog with Rank Math SEO and custom quote-request funnels", "Designer Metals (designermetals.com):"),
+          createBullet("WordPress and Elementor Pro site for an enterprise AI company", "VisualSoft Inc. (visualsoft-inc.com):"),
+          createBullet("German advisory site on Hello Elementor, tuned with LiteSpeed Cache", "Christian Behr Advisory (christianbehr.net):"),
+          createBullet("Yoast-optimized marketing site for telecom audit services", "Telecom Site Audit (telecomsiteaudit.com):"),
+          createBullet("Sun Guard Designs (sunguarddesigns.com.au), Camping Herzog (camping-herzog.de), Everon Solutions (everonsolutions.com.au)", "Also delivered:"),
 
           // Education
           createHeading("Education & Certifications"),
           new Paragraph({
-            spacing: { before: 80, after: 40 },
+            spacing: { before: 60, after: 30 },
             children: [
               new TextRun({
-                text: "Bachelor of Science in Computer Science / Information Technology",
-                bold: true,
-                size: 21,
+                text: "BS in Computer Science / Information Technology | University of Engineering and Technology (UET), Peshawar | 2018 – 2022",
+                size: 20,
                 color: "0F172A",
               }),
             ],
           }),
           new Paragraph({
-            spacing: { before: 0, after: 100 },
+            spacing: { before: 40, after: 60 },
             children: [
               new TextRun({
-                text: "University of Engineering and Technology (UET) Peshawar  |  2018 – 2022",
+                text: "PHP with Laravel for Beginners | Udemy | 2024",
                 size: 20,
-                color: "475569",
-              }),
-            ],
-          }),
-          new Paragraph({
-            spacing: { before: 40, after: 40 },
-            children: [
-              new TextRun({
-                text: "PHP with Laravel for Beginners - Become a Master in Laravel",
-                bold: true,
-                size: 21,
                 color: "0F172A",
-              }),
-            ],
-          }),
-          new Paragraph({
-            spacing: { before: 0, after: 120 },
-            children: [
-              new TextRun({
-                text: "Udemy Professional Certification  |  2024",
-                size: 20,
-                color: "475569",
               }),
             ],
           }),

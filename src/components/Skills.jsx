@@ -5,6 +5,7 @@ import {
   Code, 
   Database, 
   Zap, 
+  Terminal,
   CheckCheck, 
   Sparkles 
 } from 'lucide-react';
@@ -19,6 +20,7 @@ export default function Skills() {
       case 'Code': return <Code size={20} />;
       case 'Database': return <Database size={20} />;
       case 'Zap': return <Zap size={20} />;
+      case 'Terminal': return <Terminal size={20} />;
       default: return <Sparkles size={20} />;
     }
   };
